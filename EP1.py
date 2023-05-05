@@ -12,6 +12,20 @@ def QuestA(txt):
             prep += 1
     print(prep)
 
+# Questão B
+def QuestB(txt):
+    verbos = 0
+    for palavra in txt:
+        if Verbo(palavra):
+            verbos += 1
+    print(verbos)
+
+def Verbo(pal):
+    return len(pal) == 7 and pal[-1] in letraOutra
+
 
 # QuestA(txtA)
 # QuestA(txtB)
+
+# QuestB(txtA)
+# QuestB(txtB)
