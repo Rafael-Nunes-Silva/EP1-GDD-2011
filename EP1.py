@@ -34,6 +34,20 @@ def QuestC(txt):
 def PrimeiraPessoa(verb):
     return verb[0] in letraOutra
 
+# Questão D
+def QuestD(txt):
+    txt.sort(key = Ordenar)
+    print(txt)
+
+def Ordenar(palavra):
+    ord = "abcdefghijklmnopqrstuvwxyz"
+    res = ""
+
+    for l in palavra:
+        res += ord[ordem.index(l)]
+    
+    return res
+
 # QuestA(txtA)
 # QuestA(txtB)
 
@@ -42,3 +56,6 @@ def PrimeiraPessoa(verb):
 
 # QuestC(txtA)
 # QuestC(txtB)
+
+# QuestD(txtA)
+# QuestD(txtB)
