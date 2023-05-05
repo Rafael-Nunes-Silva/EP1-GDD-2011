@@ -23,9 +23,22 @@ def QuestB(txt):
 def Verbo(pal):
     return len(pal) == 7 and pal[-1] in letraOutra
 
+# Questão C
+def QuestC(txt):
+    verbosPrim = 0
+    for palavra in txt:
+        if Verbo(palavra) and PrimeiraPessoa(palavra):
+            verbosPrim += 1
+    print(verbosPrim)
+
+def PrimeiraPessoa(verb):
+    return verb[0] in letraOutra
 
 # QuestA(txtA)
 # QuestA(txtB)
 
 # QuestB(txtA)
 # QuestB(txtB)
+
+# QuestC(txtA)
+# QuestC(txtB)
