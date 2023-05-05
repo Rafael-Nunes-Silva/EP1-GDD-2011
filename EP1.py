@@ -3,6 +3,7 @@ txtB = "pwbfdmtc jms gswg wvsscb ffq lbrhbn lcxc hcr thc mghts vkgfc nrvfgs dsrd
 
 letraZumbi = "zmb"
 letraOutra = "tshjpnwlrcxkqvdgf"
+ordem = "zmbtshjpnwlrcxkqvdgf"
 
 # Questão A
 def QuestA(txt):
@@ -48,6 +49,26 @@ def Ordenar(palavra):
     
     return res
 
+# Questão E
+def QuestE(txt):
+    magicos = 0
+    for palavra in txt:
+        if not RepeteLetra(palavra) and ParaNum(palavra) % 42 == 0:
+            magicos += 1
+    print(magicos)
+
+def RepeteLetra(txt):
+    for o in ordem:
+        if txt.count(o) > 1:
+            return True
+    return False
+
+def ParaNum(txt):
+    num = 0
+    for i in range(0, len(txt)):
+        num += ordem.index(txt[i]) * (20 ** i)
+    return num
+
 # QuestA(txtA)
 # QuestA(txtB)
 
@@ -59,3 +80,6 @@ def Ordenar(palavra):
 
 # QuestD(txtA)
 # QuestD(txtB)
+
+# QuestE(txtA)
+# QuestE(txtB)
